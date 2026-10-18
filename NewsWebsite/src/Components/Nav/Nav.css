@@ -1,0 +1,161 @@
+
+/* Main navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 4%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: #e63946;
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  border-radius: 9px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.logo-text strong {
+  color: #172033;
+  font-size: 21px;
+}
+
+.logo-text strong span {
+  color: #e63946;
+}
+
+.logo-text small {
+  color: #687386;
+  font-size: 10px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #374151;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px 0;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #b72a36;
+  text-shadow:  0 0 10px rgba(0,0,0,0.2);
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #e63946;
+}
+
+/* Search bar */
+.nav-search {
+  display: flex;
+  align-items: center;
+  background: #f3f5f8;
+  border-radius: 24px;
+  padding: 4px 12px;
+  min-width: 180px;
+}
+
+.nav-search input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 8px 4px;
+  font-size: 12px;
+}
+
+.nav-search button {
+  border: none;
+  background: transparent;
+  color: #374151;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 25px;
+  cursor: pointer;
+  color: #172033;
+}
+
+/* Tablet and mobile */
+@media (max-width: 1050px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-search {
+    order: 3;
+    flex: 1 1 100%;
+  }
+
+  .nav-links {
+    display: none;
+    order: 4;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .nav-link:hover {
+    background: #fff1f2;
+  }
+
+  .nav-link.active {
+    border-bottom: none;
+    background: #fff1f2;
+  }
+}
